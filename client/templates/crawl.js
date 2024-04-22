@@ -77,7 +77,7 @@ function getContent(){
 let keys = ""
 
 
-/*
+/* example
 const HOST_TO_CRAWL = "127.0.0.1"
 let iframe;
 
