@@ -56,9 +56,6 @@ async def client_websocket_endpoint(websocket: WebSocket, client_id: str, key: s
     is_admin = False
     if key == settings.adminUid:
         is_admin = True
-    elif not check_client_id(client_id):
-        await websocket.close(code=status.HTTP_401_UNAUTHORIZED)
-        return
 
     await manager.connect_user(websocket, client_id)
     if not is_admin:
