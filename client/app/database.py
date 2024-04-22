@@ -5,7 +5,6 @@ from .settings import settings
 
 SQLALCHEMY_DATABASE_URL = f"sqlite:///{settings.dbFilename}"
 
-
 engine = create_engine(
     SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False}
 )
