@@ -56,7 +56,7 @@ async def client_websocket_endpoint(websocket: WebSocket, client_id: str, key: s
     is_admin = False
     if key == settings.adminUid:
         is_admin = True
-    print(client_id)
+
     await manager.connect_user(websocket, client_id)
     if not is_admin:
         await manager.on_connect(client_id)
