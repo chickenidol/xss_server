@@ -1,7 +1,9 @@
 FROM python
-RUN apt update && apk upgrade
+RUN apt update
 RUN pip3 install "fastapi[all]"
 RUN git clone https://github.com/chickenidol/xss_server.git
+COPY .env /xss_server/client
 RUN cd /xss_server && pip install -r requirements.txt
-RUN cd /xss_server/client && uvicorn app.main:app
-EXPOSE 8000
+WORKDIR /xss_server/client
+EXPOSE 80
+ENTRYPOINT ["uvicorn", "app.main:app",  "--host", "0.0.0.0", "--port", "80"]
