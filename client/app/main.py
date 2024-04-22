@@ -24,7 +24,7 @@ models.Base.metadata.create_all(bind=engine)
 
 while True:
     try:
-        conn = sqlite3.connect("your_database.db")
+        conn = sqlite3.connect(settings.dbFilename)
         print("Connection was successfull")
         break
     except Exception as error:

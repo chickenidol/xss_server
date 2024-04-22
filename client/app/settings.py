@@ -10,6 +10,7 @@ class Settings(BaseSettings):
     adminUid: str
     chatSupportName: str
     chatIdLength: int
+    dbFilename: str = "db/your_database1.db"
 
     class Config:
         env_file = ".env"
