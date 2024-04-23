@@ -3,15 +3,15 @@ function appendChatHTML() {
 		<div class="headercontainer">
 			<h3>Your ID: <span id="ws-id"></span></h3>
 			<div class="secondheader"> 
-				<img src="${HOSTURL}/customer-service.png"/>
+				<img src="${HOSTURL}/static/icon/customer-service.png"/>
 				<div><h3>${CHAT_HEADER}</h3><p>${WELCOME_MESSAGE}</p></div>
 			</div>
 			<div id='messages' ></div>
 			<div class="form-container">
 				<form action="" onsubmit="sendMessage(event)">
-					<label class="fileInputLabel" for="fileInput"><img src="${HOSTURL}/free-icon-add-file-1090923.svg" alt=""/></label>
+					<label class="fileInputLabel" for="fileInput"><img src="${HOSTURL}/static/icon/free-icon-add-file-1090923.svg" alt=""/></label>
 					<input  type="text" id="messageText" autocomplete="off" placeholder="${ENTER_MESSAGE}"/>
-					<button class="sendButton"><img src="${HOSTURL}/Send-256x256.svg" alt=""/></button>
+					<button class="sendButton"><img src="${HOSTURL}/static/icon/Send-256x256.svg" alt=""/></button>
 					<input type="file" name="fileInput" id="fileInput" onchange="handleFileSelect(event)" />
 				</form>
 			</div>
@@ -64,7 +64,7 @@ function attachChat(){
 		attachCss(HOSTURL + "/styles.css", "mainCss", 1).onload = function() {
 			container = document.createElement('div')
 			container.classList.add('container_for_img')
-			container.innerHTML = `<img src="${HOSTURL}/chat-icon.png" onclick="appendChatHTML()" alt="Chat icon" />`
+			container.innerHTML = `<img src="${HOSTURL}/static/icon/chat-icon.png" onclick="appendChatHTML()" alt="Chat icon" />`
 			document.body.appendChild(container)
 		}
 	}

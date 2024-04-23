@@ -49,13 +49,6 @@ async def get_admin_js(key: str):
         raise HTTPException(status_code=404)
 
 
-@router.get("/admin/static/styles.css")
-async def get_admin_css():
-    with open("../admin/templates/styles.css", "r", encoding="utf-8") as file:
-        content = file.read()
-    return Response(content=content, media_type="text/css")
-
-
 @router.get("/main.js/{id}")
 async def get_main_js(id: str):
     client_id = 0
@@ -117,29 +110,23 @@ async def get_index_css():
         return FileResponse("./templates/styles.css")
 
 
-@router.get("/Send-256x256.svg")
-@router.get("/admin/static/Send-256x256.svg")
-async def get_icon():
-    return FileResponse("./templates/Send-256x256.svg")
+@router.get("/admin/static/styles.css")
+async def get_admin_css():
+    with open("../admin/templates/styles.css", "r", encoding="utf-8") as file:
+        content = file.read()
+    return Response(content=content, media_type="text/css")
 
 
-@router.get("/free-icon-add-file-1090923.svg")
-@router.get("/admin/static/free-icon-add-file-1090923.svg")
-async def get_icon():
-    return FileResponse("./templates/free-icon-add-file-1090923.svg")
+@router.get("/static/icon/{file_name}")
+async def get_admin_static(file_name: str):
+    if file_name in [
+        "Send-256x256.svg",
+        "free-icon-add-file-1090923.svg",
+        "chat-icon.png",
+        "Vector.svg",
+        "customer-service.png"
+    ]:
+        return FileResponse(f"./templates/{file_name}")
+    else:
+        raise HTTPException(status_code=404)
 
-
-@router.get("/chat-icon.png")
-@router.get("/admin/static/chat-icon.png")
-async def get_icon():
-    return FileResponse("./templates/chat-icon.png")
-
-
-@router.get("/admin/static/Vector.svg")
-async def get_icon():
-    return FileResponse("./templates/Vector.svg")
-
-
-@router.get("/customer-service.png")
-async def get_icon():
-    return FileResponse("./templates/customer-service.png")

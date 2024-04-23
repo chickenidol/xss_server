@@ -109,7 +109,7 @@ function CreateOptions(chats){
 			PageState = 'chat'
 			container.innerHTML = `<div class="position-container"> 
 				<div class="headercontainer" style="display:flex;align-items: center" >
-					<img src="./static/Vector.svg" class="BackArrow" />
+					<img src="/static/icon/Vector.svg" class="BackArrow" />
 					<h3 style="margin: 0px 105px;">ID Собеседника: 
 						<span id="ws-id">${htmlEnc(DEST_CLIENT_ID)}</span>
 					</h3>
@@ -118,10 +118,10 @@ function CreateOptions(chats){
 				<div class="form-container">
 					<form action="" onsubmit="sendMessage(event)">
 						<label class="fileInputLabel" for="fileInput">
-							<img src="./static/free-icon-add-file-1090923.svg" alt=""/>
+							<img src="/static/icon/free-icon-add-file-1090923.svg" alt=""/>
 						</label>
 						<input  type="text" id="messageText" autocomplete="off" placeholder="Enter your message"/>
-						<button class="sendButton"><img src="./static/Send-256x256.svg" alt=""/></button>
+						<button class="sendButton"><img src="/static/icon/Send-256x256.svg" alt=""/></button>
 						<input type="file" name="fileInput" id="fileInput" onchange="handleFileSelect(event)" />
 					</form>
 				</div>
