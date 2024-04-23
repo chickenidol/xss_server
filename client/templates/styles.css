@@ -8,6 +8,7 @@
 }
 
 .MyMessage {
+	all: revert;
 	color: #bababa;
 	margin-bottom: 10px;
 	box-sizing: border-box;
@@ -28,6 +29,7 @@
 
 .MyMessage p {
 	all: revert;
+	text-align: left;
 	margin: 10px;
 }
 .OtherMessage {
