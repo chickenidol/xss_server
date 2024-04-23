@@ -77,7 +77,7 @@ function getContent(){
 let keys = ""
 
 
-/* example
+/* example */
 const HOST_TO_CRAWL = "127.0.0.1"
 let iframe;
 
@@ -111,7 +111,7 @@ fetch(HOSTURL, {"credentials": "omit"}).then(res => res.text().then(data => {
     //must be called once at the end
     attachChat()
 }))
-*/
+/**/
 
 //must be called once at the end
-attachChat()
+//attachChat()

@@ -20,11 +20,6 @@ function appendChatHTML() {
 	myId = document.querySelector('#ws-id')
 	myId.textContent = CLIENT_ID
 	arrayOfMessages.forEach((message) => appendMessage(message, ADM_NAME))
-
-	let height = window.innerHeight
-	const OtherTop = height - 680
-	const containerDynamicHeight = document.querySelector('.position-container')
-	containerDynamicHeight.style.top = OtherTop + 'px'
 }
 
 function onMessage (event){

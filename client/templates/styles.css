@@ -60,9 +60,9 @@
 
 .position-container {
 	position: fixed;
-	top: 20vh;
+	top: 60px;
+	right: 20px;
 	z-index: 999;
-	left: 75vw;
 	width: 350px;
 	background: linear-gradient(
 		353deg,
