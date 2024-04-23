@@ -54,6 +54,7 @@
 
 .OtherMessage p {
 	all: revert;
+	text-align: left;
 	margin: 10px;
 }
 
