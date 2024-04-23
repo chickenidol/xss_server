@@ -65,6 +65,7 @@ function appendMessage(messageText, preheader = "") {
 			mainFileBlock.appendChild(fileNameBlock)
 			mainFileBlock.appendChild(fileButtonBlock)
 			message.appendChild(mainFileBlock)
+			prevAdmHeader = true
 		}
 	}
 	else if (data['operation'] == 'msg'){
