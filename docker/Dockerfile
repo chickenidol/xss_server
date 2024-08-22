@@ -10,4 +10,4 @@ RUN cd /xss_server && pip install -r requirements.txt
 WORKDIR /xss_server/client
 
 EXPOSE 8000
-ENTRYPOINT ["uvicorn", "app.main:app",  "--host", "0.0.0.0", "--port", "8000", "--ssl_keyfile", "key.pem", "--ssl_certfile", "cert.pem"]
+ENTRYPOINT ["uvicorn", "app.main:app",  "--host", "0.0.0.0", "--port", "8000", "--ssl-keyfile", "key.pem", "--ssl-certfile", "cert.pem"]
